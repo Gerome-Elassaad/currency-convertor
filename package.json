@@ -1,7 +1,7 @@
 {
   "name": "currency-convertor",
   "version": "0.1.0",
-  "private": true,
+  "private": "false",
   "author": "Gerome Elassaad",
   "scripts": {
     "dev": "next dev",

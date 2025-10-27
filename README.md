@@ -13,7 +13,7 @@ A simple, modern web app that converts Australian Dollars (AUD) into five major 
 
 ## Built With
 
-* **Next.js 14** – Website framework
+* **Next.js 16** – Website framework
 * **TypeScript** – Safer, more reliable code
 * **React 18** – Modern UI framework
 * **Tailwind CSS** – Fast, clean styling
@@ -33,8 +33,6 @@ A simple, modern web app that converts Australian Dollars (AUD) into five major 
 👉 [Try it here](currency-convertor-gerome.vercel.app)
 
 ---
-
-## Getting Started
 
 ### Run Locally
 
