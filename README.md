@@ -188,18 +188,6 @@ docker-compose up -d                   # Start with Compose
 docker-compose down                    # Stop containers
 ```
 
----
-
-## CI/CD (GitHub Actions)
-
-Automatic Docker builds and tests run on every push:
-
-* **Push to main:** Builds and uploads a `latest` image
-* **Pull requests:** Build for testing only
-* **Tags (v1.0.0):** Builds and uploads versioned images
-
-**Pre-built images** are available from GitHub Container Registry:
-
 ```bash
 docker pull ghcr.io/gerome-elassaad/currency-convertor:latest
 docker run -p 3000:3000 -e OPEN_EXCHANGE_RATES_API_KEY=your_key ghcr.io/gerome-elassaad/currency-convertor:latest
