@@ -38,7 +38,7 @@ export async function GET(request: NextRequest) {
     for (let i = HISTORICAL_DAYS - 1; i >= 0; i--) {
       const date = new Date(today);
       date.setDate(today.getDate() - i);
-      const dateString = date.toISOString().split('T')[0]; // YYYY-MM-DD
+      const dateString = date.toISOString().split('T')[0];
       dates.push(dateString);
     }
 

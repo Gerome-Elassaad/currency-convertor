@@ -45,7 +45,7 @@ export const API_CONFIG = {
   BASE_URL: 'https://openexchangerates.org/api',
   ENDPOINTS: {
     LATEST: '/latest.json',
-    HISTORICAL: '/historical', // + '/YYYY-MM-DD.json'
+    HISTORICAL: '/historical',
   },
 };
 

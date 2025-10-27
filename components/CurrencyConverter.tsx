@@ -104,12 +104,10 @@ export default function CurrencyConverter() {
 	return (
 		<div className="min-h-screen bg-white py-12 px-4">
 			<div className="max-w-2xl mx-auto">
-				{/* Header */}
 				<h1 className="text-4xl font-normal text-gray-500 text-center mb-12">
 					Convert
 				</h1>
 
-				{/* Input Section */}
 				<div className="mb-8">
 					<div className="flex items-center gap-4 px-6 py-4 border-2 border-blue-500 rounded-2xl bg-white">
 						<div className="flex items-center gap-3">
@@ -140,7 +138,6 @@ export default function CurrencyConverter() {
 					</div>
 				</div>
 
-				{/* Error State */}
 				{error && (
 					<div className="mb-6 p-4 bg-red-50 border border-red-300 rounded-xl">
 						<p className="text-red-700 text-sm mb-2">{error}</p>
@@ -156,7 +153,6 @@ export default function CurrencyConverter() {
 
 				{loading && <LoaderOne />}
 
-				{/* Results Section */}
 				{!loading && rates && (
 					<div className="flex flex-col gap-3">
 						{SUPPORTED_CURRENCIES.map((currency) => (
@@ -172,7 +168,6 @@ export default function CurrencyConverter() {
 				)}
 			</div>
 
-			{/* Chart Modal */}
 			<Modal
 				isOpen={isModalOpen}
 				onClose={handleCloseModal}
@@ -183,7 +178,6 @@ export default function CurrencyConverter() {
 				)}
 			</Modal>
 
-			{/* Keypad Modal */}
 			<Keypad
 				isOpen={isKeypadOpen}
 				onClose={handleKeypadClose}

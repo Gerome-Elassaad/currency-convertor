@@ -51,12 +51,10 @@ export default function ChartView({ currency, onClose }: ChartViewProps) {
 		try {
 			const response = await fetchHistoricalRates(currency);
 
-			// Sort by date ascending (oldest first)
 			const sortedData = response.data.sort(
 				(a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
 			);
 
-			// Format data for chart
 			const chartData: ChartDataPoint[] = sortedData.map((point) => ({
 				date: point.date,
 				displayDate: formatDateShort(new Date(point.date)),
@@ -65,7 +63,6 @@ export default function ChartView({ currency, onClose }: ChartViewProps) {
 
 			setData(chartData);
 
-			// Calculate statistics
 			const stats = calculateStatistics(sortedData);
 			setStatistics(stats);
 		} catch (err) {
@@ -128,7 +125,6 @@ export default function ChartView({ currency, onClose }: ChartViewProps) {
 	return (
 		<div className={`${onClose ? "" : "min-h-screen"} bg-gray-100 py-8 px-4`}>
 			<div className="max-w-4xl mx-auto">
-				{/* Header */}
 				<div className="bg-white rounded-lg shadow-lg border border-gray-300 p-6 mb-6">
 					<div className="flex justify-between items-center">
 						<div>
@@ -151,7 +147,6 @@ export default function ChartView({ currency, onClose }: ChartViewProps) {
 					</div>
 				</div>
 
-				{/* Chart Section */}
 				<div className="bg-white rounded-lg shadow-lg border border-gray-300 p-6 mb-6">
 					<ResponsiveContainer width="100%" height={400}>
 						<AreaChart data={data}>
@@ -210,7 +205,6 @@ export default function ChartView({ currency, onClose }: ChartViewProps) {
 					</ResponsiveContainer>
 				</div>
 
-				{/* Statistics Section */}
 				{statistics && (
 					<div className="bg-gray-50 rounded-lg border border-gray-300 p-6">
 						<h2 className="text-lg font-semibold text-gray-900 mb-4">
