@@ -31,9 +31,15 @@ export const CURRENCY_INFO: Record<CurrencyCode, CurrencyInfo> = {
     symbol: '$',
     decimals: 2,
   },
+  AUD: {
+    code: 'AUD',
+    name: 'Australian Dollar',
+    symbol: '$',
+    decimals: 2,
+  },
 };
 
-export const SUPPORTED_CURRENCIES: CurrencyCode[] = ['USD', 'EUR', 'GBP', 'JPY', 'NZD'];
+export const SUPPORTED_CURRENCIES: CurrencyCode[] = ['AUD', 'USD', 'EUR', 'GBP', 'JPY', 'NZD'];
 
 export const API_CONFIG = {
   BASE_URL: 'https://openexchangerates.org/api',
